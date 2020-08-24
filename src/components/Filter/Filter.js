@@ -6,6 +6,7 @@ const Filter = props => {
     <div className={styling.Filter}>
       <input type="checkbox" onClick={props.ifDone}/>
       <p>hide completed</p>
+      <button onClick={props.clearList}><i className="fas fa-trash"></i></button>
     </div>
   );
 };

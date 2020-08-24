@@ -8,9 +8,9 @@ class App extends Component {
   state = {
     tasks: [
       // { taskName: "buy eggs", done: false },
-      // { taskName: "buy cocke", done: false },
-      // { taskName: "buy meth", done: false },
-      // { taskName: "buy fentanol", done: false },
+      // { taskName: "buy bread", done: false },
+      // { taskName: "eat dinner", done: false },
+      // { taskName: "get a job", done: false },
     ],
     newTask: {
       taskName: "",
@@ -58,6 +58,10 @@ class App extends Component {
     })
   }
 
+  clearListHandler = () => {
+    this.setState({tasks:[]})
+  }
+
   render() {
     const isTaskExist = this.state.tasks.length;
 
@@ -65,12 +69,12 @@ class App extends Component {
 
     return (
       <div className={styling.App}>
-        <Filter ifDone={this.hideDoneTasksHandler}/>
+        <Filter ifDone={this.hideDoneTasksHandler} clearList={this.clearListHandler}/>
         <hr />
         {isTaskExist ? (
           <ToDoList tasks={this.state.tasks} check={this.checkTaskHandler} ifHide={this.state.hide}/>
         ) : (
-          <p>Nothing to do...</p>
+          <p style={{fontSize:'2rem'}}>Nothing to do...</p>
         )}
         <hr />
         <NewTask
