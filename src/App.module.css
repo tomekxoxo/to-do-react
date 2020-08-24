@@ -1,0 +1,36 @@
+.App{
+  width: 400px;
+  margin: auto;
+  background-color:#FEFEFE;
+  box-shadow: 10px 10px 5px #C3C5CB;
+  border-radius: 10px;
+  text-align: center;
+}
+
+*{
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline: none;
+}
+html{
+  font-size: 10px;
+}
+hr{
+  margin: .5rem 0;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background-color: #D4D6DD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width:768px){
+  .App{
+    width: 100%;
+  }
+}
